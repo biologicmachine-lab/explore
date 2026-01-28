@@ -1,24 +1,55 @@
+.explore-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-//import React from 'react';
-//import './ExploreRSVP.css';
+.birthday-rsvp-card {
+  background: linear-gradient(135deg, #ffdeec 0%, #e0c6ff 100%);
+  padding: 2em;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.14);
+  max-width: 400px;
+  text-align: center;
+  margin-top: 2em;
+  animation: partyGlow 3s infinite alternate;
+}
 
-//const PHONE_NUMBER = "+1234567890"; // Change to actual phone number
-//const FACEBOOK_PROFILE = "https://facebook.com/exampleprofile"; // Change to actual Facebook profile URL
+@keyframes partyGlow {
+  from {
+    box-shadow: 0 2px 16px rgba(254,144,175,0.3);
+  }
+  to {
+    box-shadow: 0 2px 36px rgba(145,125,254,0.4);
+  }
+}
 
-//function sendConfirmation(message) {
-  // Simultaneously open phone dialer and Facebook profile
-//  window.open(`tel:${PHONE_NUMBER}`, "_self"); // Opens dialer (mobile)
-//  window.open(`${FACEBOOK_PROFILE}`, "_blank"); // Opens Facebook profile
-//  alert(`"${message}" confirmation sent via Phone and Facebook!`);
-//}
+.animated-btn {
+  margin: 1em;
+  padding: 1em 2em;
+  background: #fe90af;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(254,144,175,0.3);
+  transition: transform 0.2s, background 0.3s;
+  position: relative;
+  animation: bounce 1.6s infinite;
+}
 
-//export default function ExploreRSVP() {
-//  return (
-//    <div className="explore-page">
-//      <h2>Explore</h2>
-//      <section className="birthday-rsvp-card">
-//        <h3>You'r...  
-//    </div>
-//  );
-//}
+.animated-btn:hover {
+  background: #b575ee;
+  transform: scale(1.09);
+}
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
